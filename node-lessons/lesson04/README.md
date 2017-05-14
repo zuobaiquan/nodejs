@@ -201,8 +201,8 @@ $.get('http://data3_source', function (data) {
 eventproxy 提供了不少其他场景所需的 API，但最最常用的用法就是以上的这种，即：
 
 1. 先 `var ep = new eventproxy();` 得到一个 eventproxy 实例。
-1. 告诉它你要监听哪些事件，并给它一个回调函数。`ep.all('event1', 'event2', function (result1, result2) {})`。
-1. 在适当的时候 `ep.emit('event_name', eventData)`。
+2. 告诉它你要监听哪些事件，并给它一个回调函数。`ep.all('event1', 'event2', function (result1, result2) {})`。
+3. 在适当的时候 `ep.emit('event_name', eventData)`。
 
 eventproxy 这套处理异步并发的思路，我一直觉得就像是汇编里面的 goto 语句一样，程序逻辑在代码中随处跳跃。本来代码已经执行到 100 行了，突然 80 行的那个回调函数又开始工作了。如果你异步逻辑复杂点的话，80 行的这个函数完成之后，又激活了 60 行的另外一个函数。并发和嵌套的问题虽然解决了，但老祖宗们消灭了几十年的 goto 语句又回来了。
 
@@ -260,5 +260,5 @@ topicUrls.forEach(function (topicUrl) {
 
 
 
-
+下一篇 Lesson 5: [《使用 async 控制并发》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson05)
 

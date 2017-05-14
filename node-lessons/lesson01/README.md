@@ -128,5 +128,5 @@ scheme有我们很熟悉的`http`、`https`、`ftp`，以及著名的`ed2k`，`t
 
 
 
-
+下一篇 Lesson 2: [《学习使用外部模块》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson02)
 

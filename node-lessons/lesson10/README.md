@@ -81,3 +81,7 @@ http://jsperf.com/math-perf-alsotang
 进入之后点击那个 `Run tests` 按钮，就可以在浏览器中看到它们的效率差异了，毕竟浏览器也是可以跑 js 的。
 
 点击这里：http://jsperf.com/math-perf-alsotang/edit ，就可以看到这个 benchmark 是怎么配置的，很简单。
+
+
+
+下一篇 Lesson 11: [《作用域与闭包：this，var，(function () {})》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson11) -- by [@Ricardo-Li](https://github.com/Ricardo-Li/)

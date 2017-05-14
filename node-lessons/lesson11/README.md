@@ -7,8 +7,8 @@
 ## 知识点
 
 1. 理解 js 中 var 的作用域
-1. 了解闭包的概念
-1. 理解 this 的指向
+2. 了解闭包的概念
+3. 理解 this 的指向
 
 ## 课程内容
 
@@ -226,3 +226,7 @@ newFoo(); // { value: 100 }
 ```
 
 完。
+
+
+
+下一篇 Lesson 12: [《线上部署：heroku》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson12)

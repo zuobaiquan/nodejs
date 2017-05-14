@@ -257,3 +257,7 @@ Nodeclub 里面的测试使用的技术跟前面介绍的是一样的，should m
 https://github.com/cnodejs/nodeclub/blob/master/test/controllers/topic.test.js
 
 
+
+下一篇 Lesson 9: [《正则表达式》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson09)
+
+

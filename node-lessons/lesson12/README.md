@@ -87,3 +87,7 @@ push 完成后，在命令键入 `heroku open`，则 heroku 会自动打开浏�
 国内的话，其实在阿里云上面也可以考虑这么搞一搞。
 
 完。
+
+
+
+下一篇 Lesson 13: [《持续集成平台：travis》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson13)

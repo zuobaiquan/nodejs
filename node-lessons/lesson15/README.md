@@ -7,7 +7,7 @@
 ## 知识点
 
 1. 了解 mongodb (http://www.mongodb.org/ )
-1. 学习 mongoose 的使用 (http://mongoosejs.com/ )
+2. 学习 mongoose 的使用 (http://mongoosejs.com/ )
 
 ## 课程内容
 
@@ -170,3 +170,7 @@ Nodeclub 是使用 Node.js 和 MongoDB 开发的社区系统
 https://github.com/cnodejs/nodeclub
 
 完。
+
+
+
+下一篇 Lesson 16: [《cookie 与 session》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson16) -- by [@Ricardo-Li](https://github.com/Ricardo-Li/)

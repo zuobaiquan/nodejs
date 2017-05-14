@@ -3,7 +3,7 @@
 ## 知识点
 
 1. 理解 Promise 概念，为什么需要 promise
-1. 学习 q 的 API，利用 q 来替代回调函数(https://github.com/kriskowal/q )
+2. 学习 q 的 API，利用 q 来替代回调函数(https://github.com/kriskowal/q )
 
 ## 课程内容
 
@@ -687,6 +687,10 @@ getPromise('1',3000)
 ## 结束语
 
 当你理解完上面所有的知识点时，你就会正确高效的使用promise了。本节只是讲了promise的原理和几个基本的API，不过你掌握了这些之后，再去看q的文档，应该很容易就能理解各个api的意图。
+
+
+
+下一篇 Lesson 18: [《何为 connect 中间件》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson18) -- by [@albin3](https://github.com/albin3)
 
 
 

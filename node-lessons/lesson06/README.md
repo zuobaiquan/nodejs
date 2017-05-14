@@ -237,3 +237,9 @@ cov test-cov:
 这时，我们只需要调用 `make test` 或者 `make cov`，就可以跑我们相应的测试了。
 
 至于 Makefile 怎么写？以及 .PHONY 是什么意思，请看这里：http://blog.csdn.net/haoel/article/details/2886 ，左耳朵耗子陈皓2004年的文章。
+
+
+
+
+
+下一篇 Lesson 7: [《浏览器端测试：mocha，chai，phantomjs》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson07) -- by [@elrrrrrrr](https://github.com/elrrrrrrr)

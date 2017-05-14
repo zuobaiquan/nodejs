@@ -65,8 +65,8 @@ cheerio(https://github.com/cheeriojs/cheerio ) 大家可以理解成一个 Node.
 还记得我们怎么新建一个项目吗？
 
 1. 新建一个文件夹，进去之后 `npm init`
-1. 安装依赖 `npm install --save PACKAGE_NAME`
-1. 写应用逻辑
+2. 安装依赖 `npm install --save PACKAGE_NAME`
+3. 写应用逻辑
 
 我们应用的核心逻辑长这样
 
@@ -100,3 +100,9 @@ app.get('/', function (req, res, next) {
 OK，一个简单的爬虫就是这么简单。这里我们还没有利用到 Node.js 的异步并发特性。不过下两章内容都是关于异步控制的。
 
 记得好好看看 superagent 的 API，它把链式调用的风格玩到了极致。
+
+
+
+
+
+下一篇 Lesson 4: [《使用 eventproxy 控制并发》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson04)

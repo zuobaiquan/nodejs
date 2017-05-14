@@ -28,7 +28,7 @@
 ## 知识点
 
 1. 学习 async(https://github.com/caolan/async ) 的使用。这里有个详细的 async demo 演示：https://github.com/alsotang/async_demo
-1. 学习使用 async 来控制并发连接数。
+2. 学习使用 async 来控制并发连接数。
 
 ## 课程内容
 
@@ -111,4 +111,4 @@ async.mapLimit(urls, 5, function (url, callback) {
 
 
 
-
+下一篇 Lesson 6: [《测试用例：mocha，should，istanbul》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson06)

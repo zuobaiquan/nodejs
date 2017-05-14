@@ -104,3 +104,7 @@ export NVM_DIR="/Users/YOURUSERNAME/.nvm"
 `$ nvm ls`
 
 看一下
+
+
+
+下一篇 Lesson 1: [《一个最简单的 express 应用》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson01)

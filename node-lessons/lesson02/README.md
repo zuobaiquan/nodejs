@@ -97,3 +97,7 @@ OK，运行我们的程序
 这是因为，当我们不传入 `q` 参数时，`req.query.q` 取到的值是 `undefined`，`utility.md5` 直接使用了这个空值，导致下层的 `crypto` 抛错。
 
 
+
+
+
+下一篇 Lesson 3: [《使用 superagent 与 cheerio 完成简单爬虫》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson03)

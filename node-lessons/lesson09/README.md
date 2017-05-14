@@ -130,9 +130,9 @@ var multiline = require('multiline');
 var text = multiline.stripIndent(function () {
 /*
     head
-    ```
+```
     code code2 .code3```
-    ```
+    ​```
     foot
 */
 });
@@ -144,7 +144,7 @@ var text = multiline.stripIndent(function () {
 
 这个原子的惯用写法就是 `[\s\S]`
 
-```js
+​```js
 var match1 = text.match(/^```[\s\S]+?^```/gm);
 console.log(match1) // => [ '```\ncode code2 code3```\n```' ]
 
@@ -156,3 +156,5 @@ console.log(match2) // => [ '```\ncode code2 .code3```\n```' ]
 完。
 
 
+
+下一篇 Lesson 10: [《benchmark 怎么写》](https://github.com/zuobaiquan/nodejs/tree/master/node-lessons/lesson10)

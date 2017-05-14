@@ -9,7 +9,7 @@
   "author": "alsotang <alsotang@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.9.5",
-    "utility": "^1.2.0"
+    "express": "^4.15.2",
+    "utility": "^1.12.0"
   }
 }
