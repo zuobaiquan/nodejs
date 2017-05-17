@@ -93,10 +93,3 @@
 
 [GitBook 在线阅读](https://maninboat.gitbooks.io/n-blog/content/)
 
-## 捐赠
-
-您的捐赠，是我持续开源的动力。
-
-支付宝 | 微信
-------|------
-![](./public/alipay.png) | ![](./public/wechat.jpeg)
