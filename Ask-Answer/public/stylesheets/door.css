@@ -1,0 +1,127 @@
+body{
+    background:#f7fafc ;
+}
+#particle-js{
+    /*background: #f7fafc;　第二套背景色*/
+    /*background: #ddd; 第一套bgc*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30rem;
+    /*设置透明度的话，可以点击到下面图层的元素*/
+    opacity: 0.99;
+}
+canvas{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -10;
+}
+#container{
+    width: 20%;
+    margin: 10rem auto;
+    text-align: center;
+}
+#container h1{
+    font-size: 70px;
+}
+#container #sub{
+    margin-top: -2rem;
+    font-size: 20px;
+    color: grey;
+    letter-spacing: 3px;
+}
+#InAndUp span{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 25%;
+    height: 2.5rem;
+    font-size: 20px;
+    font-weight: bold;    
+    line-height: 2.5rem;
+    color: grey;
+}
+#InAndUp #loginBtn{
+    border-right: transparent;
+}
+#container #logInBtn{
+    color: black;
+}
+#signUpForm{
+    display: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+
+}
+form div{
+    width: 100%;
+    border: 1px solid #ddd;
+    position: relative;
+}
+form input{
+    font-size: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2.9rem;
+    padding-left: 0.6rem;
+    line-height: 2.9rem;
+    border: 1px solid #ddd;
+    outline: none;
+}
+/*　改变chrome默认input黄色的背景色*/
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+form .sign{
+    font-size: 21px;
+    background: #ddd;
+    margin-top: 1rem;
+    letter-spacing: 2px;
+}
+form .getCaptcha{
+    height: 2.9rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 0 1rem;
+    letter-spacing: 2px;
+    font-size: 17px;
+    position: absolute;
+    right: 0;
+    width: 50%;
+    background: #fff;
+}
+form .getCaptcha:hover{
+    background: black;
+    color: white;
+}
+#signUpForm .emailNoti{
+    position: absolute;
+    width: 50%;
+    line-height: 2.9rem;
+    color: red;
+    text-align: left;
+    padding-left: 1rem;
+    font-weight: bold;
+}
+
+#container footer{
+    position: fixed;
+    bottom: 2rem;
+    color: grey;
+    font-size: 20px;
+    letter-spacing: 3px;
+    width: 100%;
+    left: 0;
+}
+#container footer a{
+    text-decoration: none;
+    color: black;
+}
+footer span{
+    color: green;
+}

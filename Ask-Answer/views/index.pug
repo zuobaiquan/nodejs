@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	//-执行其他地方的函数，来填充content
+	include includes/newDebateDialog.pug
+	div#container
+		div#newDebate
+			span#askSpan(class='fa fa-question fa-3x')  提问
+			span#ansSpan(class='fa fa-edit fa-3x')  回答
+		div#content-header
+			span#popularBtn 热门问题
+			span#newBtn 最新提问
+		div#content-grid
+			div#content-grid-pop
+			div#content-grid-new
+																		
+	
+block profile
+	include ./profile.pug

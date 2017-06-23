@@ -1,0 +1,83 @@
+extends layout
+
+block content
+    div#userPage
+        div#userHeader
+            div#uh-section
+                //-img#uhs-img(src='/images/3.jpg')
+                div#uhs-img                   
+                div#uhs-right
+            div#userEditBtn 编辑个人资料
+        div#userMain
+            div#uMainLeft
+                div#uml-header
+                    span#umlh-num3 回答
+                        span#umlh-num4 0
+                    span#umlh-num1 提问
+                        span#mhlh-num2 0
+                div#uml-main
+                    div#umlm-ans
+                        //-  div.item
+                        //-     p.item-title 我是问题1我是问题1我是问题1我是问题1我是问题1我是问题1我是问题1
+                        //-     div.item-answer
+                        //-         | 回答第一个问题回答第一个问题回答第一个问题回答第一个问题回答第一个问题回答第一个问题
+                        //-         | 回答第一个问题回答第一个问题回答第一个问题回答第一个问题回答第一个问题回答第一个问题      
+                        //-     span.item-time 2017-11-12-12-13
+                        //-     span.item-comment.fa.fa-comment &nbsp;评论
+
+                    div#umlm-quest
+                        //- div.item
+                        //-     p.item-title 我是问题1我是问题1我是问题1我是问题1我是问题1我是问题1我是问题1
+                        //-     div.item-time-tags
+                        //-         span.item-time 2017-11-12-12-13
+                        //-         div.item-tags-div
+                        //-             span.item-tag 社会
+                        //-             span.item-tag 法制
+                        //-             span.item-tag 友善
+                        //-             span.item-tag 和谐
+
+            div#uMainRight
+        form(enctype="multipart/form-data")#userPageEdit
+            div#upe-img
+                //- cover就是出来个灰色div，覆盖效果
+                div#upe-img-cover
+                    span(class='fa fa-camera')
+                    | 修改头像
+                input.uploadImg(type='file' name='avatar')
+            div#upe-main
+
+                h1 林水溶
+                span(class="fa fa-close fa-3x")
+                div#upem-sex 
+                    span 性别
+                    span.input
+                        input(type='radio' name='sex' value='male' id='maleID')
+                        label(for='maleID') 男
+                        input(type='radio' name='sex' value='famale' id='famaleID')
+                        label(for='famaleID') 女
+                        input(type='radio' name='sex' value='other' id='otherID')
+                        label(for='otherID') 其他
+                div
+                    span#upem-description 一句话介绍
+                    input(name='description' value='一句话介绍').input
+                div
+                    span#upem-tags 个人标签
+                    input(name='tags' value='悲观,呆,不萌,宅,逗比').input
+                div
+                    span#upem-address 居住地
+                    input(name='address' value='居住地').input
+                div
+                    span#upem-industry 所在行业
+                    input(name='industry' value='所在行业').input
+                div
+                    span#upem-carerr-experience 职业经历
+                    input(name='experience' value='职业经历').input
+                div
+                    span#upem-education 教育经历
+                    input(name='education' value='教育经历').input
+                div
+                    span#upem-introdution 个人简介
+                    input(name='introdution' value='个人简介').input 
+                span.submit 提交编辑
+
+    script(src='/javascripts/userPage.js')

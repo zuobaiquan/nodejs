@@ -1,0 +1,26 @@
+doctype html
+html
+	head
+		title #{title}
+		meta(charset='utf-8')
+		link(rel='stylesheet', href='/stylesheets/main.css')
+		link(rel='stylesheet', href='/stylesheets/header.css')
+		link(rel='stylesheet', href='/stylesheets/content.css')
+		link(rel='stylesheet', href='/stylesheets/profile.css')
+		link(rel='stylesheet', href='/stylesheets/new-debate-dialog.css')
+		link(rel='stylesheet', href='/stylesheets/font-awesome-4.7.0/css/font-awesome.min.css')
+		link(rel='icon' href='/images/favicon.ico')
+		link(rel='stylesheet', href='/stylesheets/content-grid.css')
+		link(rel='stylesheet', href='/stylesheets/userPage.css')
+		link(rel='stylesheet', href='/stylesheets/questionPage.css')
+		//- 代码高亮部分的样式
+		link(rel="stylesheet"  href="https://cdn.bootcss.com/highlight.js/9.6.0/styles/monokai_sublime.min.css")
+		//- 自己写的markdown语法的样式
+		link(rel='stylesheet' href='/stylesheets/markdown.css')
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		
+	body
+		include includes/header.pug
+		block content
+		block profile
+		script(src='/javascripts/main.js')

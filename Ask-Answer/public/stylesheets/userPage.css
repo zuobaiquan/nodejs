@@ -1,0 +1,293 @@
+#userPage{
+    width: 55%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+#userHeader{
+    background: white;
+    width: 100%;
+    height: 25rem;;
+    margin-bottom: 2rem;
+    border-radius: 0.3rem;
+    position:relative;
+    border: 1px solid #ddd;
+}
+#uh-section{
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    bottom: 2rem;
+    left: 0;
+    display: flex;
+    align-items: flex-end;
+}
+#uhs-img{
+    width: 12rem;
+    height: 12rem;
+    margin: 1rem;
+    margin-left: 2rem;
+    position: relative;
+    background-image: url('/images/avatar.jpg');
+    background-position: 0 0;
+    background-size: 12rem 12rem;
+    background-repeat: no-repeat;
+}
+
+#uhs-right{
+    width: 70%;
+    height: 10rem;
+    margin: 1rem;
+}
+#uhs-right span{
+    display: inline-block;
+    margin: 0.5rem;
+    background: #ddd;
+    padding: 0 4px;
+    border-radius: 2px;
+}
+#uhs-right span:first-child{
+    font-size: 25px;
+    background: white;
+}
+#uhs-right p:last-child{
+    margin:1rem;
+    font-size: 15px;
+    overflow-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+#userEditBtn{
+    width: 12rem;
+    height: 2.3rem;
+    border: 1px solid black;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 0.7rem;
+    position: absolute;
+    bottom: 3rem;
+    right: 2rem;
+    border-radius: 0.3rem;
+}
+#userEditBtn:hover{
+    color: grey;
+    border-color: grey;
+}
+
+/*```````````````````````*/
+
+#userMain{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+}
+
+#uMainLeft{
+    background: white;
+    width: 62%;
+    border-radius: 0.3rem;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    border: 1px solid #ddd;
+}
+#uml-header{
+    height: 5rem;
+    margin: 2rem 2rem 0 2rem;
+    padding-bottom: 1rem;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+#uml-header >span{
+    margin: 0 1rem;
+    letter-spacing: 1px;
+}
+#uml-header > span > span {
+    margin: 0 0.2rem;
+    font-size: 1.3rem;
+    color: grey;
+}
+
+#uml-main{
+    /*min-height: 5rem;*/
+    margin: 0 2rem;
+}
+#umlm-quest{    
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+#umlm-quest .item{
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+#umlm-quest .item-title{
+    font-size: 22px;
+    margin-bottom: 1rem;
+}
+#umlm-quest .item-time-tags{
+    display: flex;
+    justify-content: space-between;
+}
+#umlm-quest .item-time{
+    font-size: 15px;
+    color: grey;
+}
+#umlm-quest .item-tag{
+    font-size: 15px;
+    margin: 0 5px;
+    color: grey;
+}
+
+#umlm-ans{
+    display:none;
+    display: flex;
+    flex-direction: column;
+}
+#umlm-ans .item{
+    margin: 1rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+#umlm-ans .item-title{
+    font-size: 20px;
+}
+#umlm-ans .item-answer{
+    font-size: 15px;
+    margin: 1rem 0;
+    letter-spacing: 1px;
+}
+#umlm-ans .item-time{
+    font-size: 15px;
+    color: grey;
+}
+#umlm-ans .item-comment{
+    font-size: 15px;
+    margin-left: 2rem;
+    color: grey;
+}
+
+
+#uMainRight{
+    background: white;
+    width: 35%;
+    height: 40rem;
+    border-radius: 0.3rem;
+    border: 1px solid #ddd;
+}
+
+/*`````````````````````````*/
+#userPageEdit{
+    position: absolute;
+    background: white;
+    border: 1px solid #ddd;
+    width: 101%;
+    min-height: 70rem;
+    display: none;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+#upe-img{
+    width: 12rem;
+    height: 12rem;
+    background: #ccc;
+    margin-right: 4rem;
+    position: relative;
+    background-image: url('/images/avatar.jpg');
+    background-position: 0 0;
+    background-size: 12rem 12rem;
+    background-repeat: no-repeat;
+}
+#upe-img input{
+    opacity: 0;
+    height: 12rem;
+    width: 12rem;
+    position: absolute;
+    top: 0;
+}
+#upe-img-cover{
+    background: grey;
+    width: 12rem;
+    height: 12rem;
+    top: 0;
+    left: 0;
+    opacity: 0.8;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#upe-img-cover span{
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+#upe-main{
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;    
+    width: calc(100% - 16rem);    
+}
+/*#upe-main > *{
+    margin-left: 3rem;
+}*/
+#upe-main >div{
+    display: flex;
+    justify-content: space-between;
+}
+#upe-main > div span{
+    font-size: 15px;
+    display: inline-block;
+    font-weight: bold;    
+}
+#upe-main .input{
+    float: right;
+    margin-left: 3rem;
+    width: 70%;
+    height: 2.5rem;
+    border-radius: 3px;
+    border: 1px solid #bbb;
+    padding-left: 1rem;
+}
+#upem-sex .input{
+    border-radius: 0;
+    border: none;
+}
+#upem-sex .input label{
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+}
+#upe-main .fa-close{
+    position: absolute;
+    top: 3rem;
+    right: 6rem;
+    color: grey;
+}
+#upe-main .fa-close:hover{
+    color: black;
+}
+#upe-main .submit{
+    text-align: center;
+    display: inline-block;
+    width: 10rem;
+    height: 3rem;
+    line-height: 3rem;
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 15px;
+}
+#upe-main .submit:hover{
+    color: grey;
+    border-color: grey;
+}

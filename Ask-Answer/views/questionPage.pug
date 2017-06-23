@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    div#questionPageBody
+        div#questionPageMain
+            div#qpm-up
+                each tag in data.tags
+                    span.tags= tag
+                p.title= data.title 
+                p.description= data.description
+                p.qpm-up-down
+                    span.fa.fa-comment &nbsp;评论
+                    span.fa.fa-bolt &nbsp;举报
+                    
+                p#qpm-up-answer-count 
+                    span 0个回答
+                    span 默认排序
+            div#qpm-mid
+                                      
+            div#qpm-down                   
+                span.fa.fa-window-maximize
+                textarea#newAnswer(placeholder="输入你的回答...")
+                span.submit 发布回答
+
+        div#questionPageSider
+            span.questionTime= data.time
+            span.questionProducer= data.questionProducer
+    script(src='/javascripts/marked.min.js')
+    script(src='/javascripts/highlight.min.js')
+    script(src='/javascripts/xss-filters.min.js')
+    script(src='/javascripts/questionPage.js')
