@@ -1,0 +1,31 @@
+<div class="api-test">
+    <div class="col-sm-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    {{vm.api.name}} - 接口测试
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-5 left-cont">
+                    <p>{{vm.api.desc}}</p>
+                    <p>
+                        <span class="label label-success">{{vm.api.method | methodFilter}}</span>
+                    </p>
+                    <p>
+                        <code>
+                            {{vm.api.url}}
+                        </code>
+                    </p>
+                    <p>输入参数</p>
+                    <textarea ui-codemirror="vm.cmOption" class="form-control"
+                              ng-model="vm.api.request"></textarea>
+                    <p>输出参数</p>
+                    <textarea ui-codemirror="vm.cmOption" class="form-control"
+                              ng-model="vm.api.response"></textarea>
+                </div>
+                <div ng-include="'src/admin/templates/mock-http.html'"></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,177 @@
+body {
+    background:#EEE;
+}
+.box {
+    margin-bottom:20px;
+}
+.long_txt {
+    width:98%;
+}
+
+a {
+    color:#3366CC;
+    text-decoration:underline;
+}
+a:hover {
+    color:#FF3300;
+}
+
+.page {
+    width:700px;
+    margin:10px auto;
+    background:#FFF;
+    padding:10px 20px;
+    border:1px solid #CCC;
+    border-radius:5px;
+}
+
+/* 设置头部相关样式 */
+.header {
+    padding-top:10px;
+    border-bottom:1px solid #CCC;
+}
+.header h1 {
+    font-size:60px;
+}
+.header a {
+    color:#333;
+    text-decoration:none;
+}
+/*设置LOGO的样式*/
+.logo{
+    padding: 37px 0 0 15px;
+}
+
+/*设置导航条*/
+.nav{
+    float: right;
+    margin: 73px 0 0 0;
+}
+
+.nav li{
+    float: left;
+    margin-right: 10px ;
+    list-style-type:none
+}
+
+.nav a{
+    font: bold 15px Georgia;
+    color: #666666;
+    text-decoration: none;
+}
+.nav a:hover{
+    color: #8b8888;
+}
+.nav img{
+    height: 36px;
+    width: 36px;
+    border-radius:50%;
+}
+.nav .text{
+    margin-top: 12px;
+}
+
+/* 设置出错页面 404 */
+.box_404 ul{
+    margin-right: 10px;
+    margin-bottom: 10px;
+    list-style-type:none ;
+}
+.box_404 img{
+    width: 400px;
+    height: 400px;
+    border-radius: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main {  }
+.main_content { }
+
+
+.todos {}
+.todos ul li {
+    list-style-type:none;
+    margin-bottom:10px;
+    padding-bottom:10px;
+    border-bottom:1px dotted #CCC;
+}
+.box h2 {
+    padding-bottom:5px;
+    margin-bottom:10px;
+    font-weight:400;
+    color:green;
+    font-size:28px;
+}
+.todos ul li.finished {
+    color:#666;
+}
+.todos ul li a {
+    color:#666;
+}
+.todos ul li del {
+    padding-left:15px;
+    background:url(../images/ok.gif) no-repeat left center;
+}
+.post {  }
+.post p {
+    margin-bottom:10px;
+}
+.post .submit {
+    line-height:normal;
+    padding:0;
+}
+
+.register {  }
+.register div {
+    clear:left;
+    margin-bottom:2px;
+}
+.register label {
+    float:left;
+    width:120px;
+    text-align:right;
+    padding:4px;
+    margin:1px;
+}
+.register .submit {
+    line-height:normal;
+    padding:0;
+}
+
+
+
+
+.foot {
+    border-top:1px solid #CCC;
+    color:#666;
+    padding-top:10px;
+    font-size:11px;
+}
+.foot img {
+    vertical-align:top;
+}
+

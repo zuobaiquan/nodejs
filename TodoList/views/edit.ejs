@@ -1,0 +1,18 @@
+
+<%- include('./header_i_e.ejs') -%>
+
+<div class="main box">
+    <div class="box post">
+        <h2>修改</h2>
+
+        <form action="/edit/<%= itemId %>" method="post">
+            <p><input type="text" name="title" class="long_txt" value="<%= title %>" /></p>
+            <p><input type="submit" class="submit" value="提 交" /></p>
+        </form>
+
+    </div>
+</div>
+
+    <%- include('./footer.ejs') -%>
+
+

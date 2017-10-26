@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="col-xs-4" ng-repeat="sys in vm.sysList" style="cursor: pointer;">
+		<div class="panel panel-default" ng-click="vm.viewSys(sys)">
+			<div class="panel-heading">
+				<h3 class="panel-title">{{sys.name}}</h3>
+			</div>
+			<div class="panel-body">
+				{{sys.desc}}
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-xs-4">
+		<a class="btn btn-primary" ui-sref="AddSystem">新建</a>
+	</div>
+</div>

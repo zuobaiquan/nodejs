@@ -1,0 +1,71 @@
+<div class="col-sm-7 right-cont">
+    <div class="col-sm-12 send-group">
+        <form name="form1">
+            <select class="form-control" ng-model="vm.formData.method">
+                <option value="1">GET</option>
+                <option value="2">POST</option>
+                <option value="3">PATCH</option>
+                <option value="4">DELETE</option>
+            </select>
+            <input type="text" name="url" class="form-control" placeholder="目标url"
+                   ng-model="vm.formData.url" required>
+            <button class="btn btn-primary" type="button" ng-click="vm.send()"
+                    ng-disabled="form1.$invalid">
+                发送
+            </button>
+            <button class="btn btn-default" type="button" ng-click="vm.clear()">
+                清除
+            </button>
+        </form>
+    </div>
+
+    <div class="col-sm-12">
+        <ul class="nav nav-tabs" style="margin: 20px 0;">
+            <li role="presentation" ng-class="{true:'active'}[tab==vm.formData.selectedTab]"
+                ng-repeat="tab in vm.formData.tabs" ng-click="vm.selectTab(tab)">
+                <a href="javascript:void(0);">{{tab.name}}</a>
+            </li>
+        </ul>
+    </div>
+    <div class="col-sm-12" ng-show="vm.formData.selectedTab.name=='Params'">
+        <div ng-repeat="p in vm.formData.params" class="param-item">
+            <input type="text" class="form-control" ng-model="p.key" placeholder="key">
+            <input type="text" class="form-control" ng-model="p.value" placeholder="value">
+							<span class="glyphicon glyphicon-minus-sign" aria-hidden="true" style="color: #d9534f;"
+                                  ng-click="vm.remove(vm.formData.params, $index)"></span>
+							<span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="color: #337ab7;"
+                                  ng-click="vm.add(vm.formData.params)"></span>
+        </div>
+    </div>
+    <div class="col-sm-12" ng-show="vm.formData.selectedTab.name=='Headers'">
+        <div ng-repeat="h in vm.formData.headers" class="param-item">
+            <input type="text" class="form-control" ng-model="h.key" placeholder="key">
+            <input type="text" class="form-control" ng-model="h.value" placeholder="value">
+							<span class="glyphicon glyphicon-minus-sign" aria-hidden="true" style="color: #d9534f;"
+                                  ng-click="vm.remove(vm.formData.headers, $index)"></span>
+							<span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="color: #337ab7;"
+                                  ng-click="vm.add(vm.formData.headers)"></span>
+        </div>
+    </div>
+    <div class="col-sm-12" ng-show="vm.formData.selectedTab.name=='Body'">
+        <div ng-repeat="b in vm.formData.body" class="param-item">
+            <input type="text" class="form-control" ng-model="b.key" placeholder="key">
+            <input type="text" class="form-control" ng-model="b.value" placeholder="value">
+							<span class="glyphicon glyphicon-minus-sign" aria-hidden="true" style="color: #d9534f;"
+                                  ng-click="vm.remove(vm.formData.body, $index)"></span>
+							<span class="glyphicon glyphicon-plus-sign" aria-hidden="true" style="color: #337ab7;"
+                                  ng-click="vm.add(vm.formData.body)"></span>
+        </div>
+    </div>
+    <div class="col-sm-12">
+        <hr/>
+    </div>
+    <div class="col-sm-12">
+        <p>Response</p>
+                        <textarea ui-codemirror="vm.cmOption" class="form-control"
+                                  ng-model="vm.formData.output"></textarea>
+        <p>
+            <button class="btn btn-default" type="button" ng-click="vm.formatResp()">格式化</button>
+        </p>
+    </div>
+</div>

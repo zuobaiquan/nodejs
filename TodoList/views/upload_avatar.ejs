@@ -1,0 +1,23 @@
+<%- include('./header_i_e.ejs') -%>
+
+    <div class="main box">
+        <div class="box">
+            <div class="box register">
+
+                <h2 class="box">上传头像</h2>
+                <form action="/upload_avatar" method="post" id="avatarUP" enctype="multipart/form-data">
+                    <div>
+                        <label for="avatarFile">上传头像：</label>
+                        <input type="file" name="avatar" id="avatarFile" > <br>
+                    </div>
+                    <div>
+                        <label for="sumbit"></label>
+                        <input type="submit" id="sumbit" class="submit" value="上  传" >  <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+<%- include('./footer.ejs') -%>

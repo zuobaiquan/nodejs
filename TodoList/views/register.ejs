@@ -1,0 +1,34 @@
+<%- include('./header_l_r') -%>
+
+    <div class="main box">
+        <div class="box">
+            <div class="box register">
+
+                <h2 class="box">注册</h2>
+                <form action="/register" method="post" id="register">
+                    <div>
+                        <label for="userName">用 户 名：</label>
+                        <input type="text" name="userName" id="userName" placeholder="请输入用户名"> <br>
+                    </div>
+                    <div>
+                        <label for="passWord">密    码：</label>
+                        <input type="text" name="passWord" id="passWord" placeholder="请输入密码"> <br>
+                    </div>
+                    <div>
+                        <label for="passwordConfirm">密码确认：</label>
+                        <input type="text" name="passwordConfirm" id="passwordConfirm" placeholder="请确认密码"> <br>
+                    </div>
+                    <div>
+                        <label for="email">邮箱地址：</label>
+                        <input type="text" name="email" id="email" placeholder="请输入邮箱"> <br>
+                    </div>
+                    <div>
+                        <label for="sumbit"></label>
+                        <input type="submit" id="sumbit" class="submit" value="提  交" >  <br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<%- include('./footer.ejs') -%>

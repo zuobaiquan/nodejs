@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>ToDo List</title>
+    <link href="/stylesheets/reset.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div class="page">
+
+
+
+
+    <div id='notLoginHeader' class="header box">
+        <ul class="nav">
+            <li>
+                <div class="avatar">
+
+                    <a href="/upload_avatar"> <img src="<%= avatar %>"> </a>
+
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <%= userName %>
+                </div>
+            </li>
+            <li>
+                <div class="text">
+                    <a href="/logout">登出</a>
+                </div>
+            </li>
+        </ul>
+
+        <h1 class="logo">
+            <a href="/">TODO List</a>
+        </h1>
+
+    </div>
