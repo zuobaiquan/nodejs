@@ -1,5 +1,6 @@
 
-var tools=require('./tools');   /*省略.js也是可以的*/
+/*省略.js也是可以的*/
+var tools=require('./tools');   
 
 console.log(tools.add(1,2));
 console.log(tools.sayHello());
