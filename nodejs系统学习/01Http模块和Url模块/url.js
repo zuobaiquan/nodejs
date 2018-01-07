@@ -13,9 +13,9 @@ http.createServer(function(req,res){
     //输入http://localhost:8003?name=zuobaiquan&age=23   拿到 name 和 age
     //req.url  获取浏览器url输入的信息
     var query=url.parse(req.url,true);
-    console.log(query);
+    console.log("======",req.url,query);
 
-    res.writeHead(200, {"Content-Type": "text/html;charset:utf-8"}); 
+    res.writeHead(200, {"Content-Type": "text/html;charset=utf-8"}); 
 
     if(req.url!='/favicon.ico'){
         //http://localhost:8003?name=zuobaiquan
@@ -26,10 +26,11 @@ http.createServer(function(req,res){
         console.log('name='+result.query.name);  /*获取url的get传值*/
         console.log('age='+result.query.age);
     }
-    res.write('hello,nodejs');
+    res.write('你好，nodejs');
     res.end(); /*结束响应*/
 }).listen(8003);
 console.log("open in browser http://localhost:8003");
 
 //执行 node url.js
+//supervisor改代码自动重启web服务
 //执行 supervisor url.js  支持调试

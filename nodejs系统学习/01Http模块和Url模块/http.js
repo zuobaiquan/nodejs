@@ -24,4 +24,5 @@ http.createServer(function(req,res){
 console.log("open in browser http://localhost:8080");
 
 //执行 node http.js
+//supervisor改代码自动重启web服务
 //执行 supervisor http.js  支持调试
