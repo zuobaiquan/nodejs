@@ -12,26 +12,22 @@
 
 var fs=require('fs');
 //1. fs.stat  检测是文件还是目录
-fs.stat('html',function(err,stats){
-   if(err){
-     console.log(err);
-     return false;
-   }
-   console.log('文件：'+stats.isFile()); // false
-   console.log('目录：'+stats.isDirectory()); // true
-})
-
-
-fs.stat('index.txt',function(err,stats){
-  if(err){
-   console.log(err);
-   return false;
-  }
-  console.log('文件：'+stats.isFile());
-  console.log('目录：'+stats.isDirectory());
-
-})
-
+// fs.stat('html',function(err,stats){
+//    if(err){
+//      console.log(err);
+//      return false;
+//    }
+//    console.log('文件：'+stats.isFile()); // false
+//    console.log('目录：'+stats.isDirectory()); // true
+// })
+// fs.stat('index.txt',function(err,stats){
+//   if(err){
+//    console.log(err);
+//    return false;
+//   }
+//   console.log('文件：'+stats.isFile());
+//   console.log('目录：'+stats.isDirectory());
+// })
 
 
 //2. fs.mkdir  创建目录
@@ -41,16 +37,13 @@ fs.stat('index.txt',function(err,stats){
   //mode          目录权限（读写权限），默认0777
   //callback      回调，传递异常参数err
 
-
-//fs.mkdir('css',function(err){
-//  if(err){
-//   console.log(err);
-//
-//   return false;
-//  }
-// console.log('创建目录成功');
-//
-//})
+fs.mkdir('css',function(err){
+ if(err){
+  console.log(err);
+  return false;
+ }
+ console.log('创建目录成功');
+})
 
 
 
