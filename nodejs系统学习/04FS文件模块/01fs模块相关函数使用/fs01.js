@@ -108,8 +108,7 @@ fs.mkdir('css',function(err){
 
 //拿到一个文件夹下面的所有目录
 
-//7.fs.rename 重命名
-//1.改名  2.剪切文件
+//7.fs.rename 重命名  其作用有 1.改名  2.剪切文件
 
 //fs.rename('html/index.html','html/news.html',function(err){
 //    if(err){
