@@ -1,79 +1,43 @@
-/**
- * Created by Administrator on 2017/7/6 0006.
- */
-
-//fsÄ£¿é
-
 var fs=require('fs');
-//pathÄ£¿é
-var path=require('path');  /*nodejs×Ô´øµÄÄ£¿é*/
-//urlÄ£¿é
+var path=require('path');
 var url=require('url');
-
-//»ñÈ¡ÎÄ¼şÀàĞÍµÄ·½·¨  Ë½ÓĞ
-function getMime(extname,callback){  /*»ñÈ¡ºó×ºÃûµÄ·½·¨*/
-
-    fs.readFile('./mime.json',function(err,data){
-
-        if(err){
-            console.log('mime.jsonÎÄ¼ş²»´æÔÚ');
-            return false;
-        }
-        //console.log(data.toString());
-
-        var Mimes=JSON.parse(data.toString());
-
-        var result= Mimes[extname] || 'text/html';
-
-        callback(result)
-
-    })
-
-
+function getMime(extname,callback){
+  fs.readFile('./mime.json',function(err,data){
+    if(err){
+        console.log('mime.jsonæ–‡ä»¶ä¸å­˜åœ¨');
+        return false;
+    }
+    //console.log(data.toString());
+    var Mimes=JSON.parse(data.toString());
+    var result= Mimes[extname] || 'text/html';
+    callback(result)
+  })
 }
-
 exports.statics=function(req,res,staticpath){
-
-
-    var pathname=url.parse(req.url).pathname;   /*»ñÈ¡urlµÄÖµ*/
-
-
-    if(pathname=='/'){
-        pathname='/index.html'; /*Ä¬ÈÏ¼ÓÔØµÄÊ×Ò³*/
-    }
-    //»ñÈ¡ÎÄ¼şµÄºó×ºÃû
-    var extname=path.extname(pathname);
-
-    if(pathname!='/favicon.ico'){  /*¹ıÂËÇëÇófavicon.ico*/
-        //console.log(pathname);
-        //ÎÄ¼ş²Ù×÷»ñÈ¡ staticÏÂÃæµÄindex.html
-
-        fs.readFile(staticpath+'/'+pathname,function(err,data){
-
-            if(err){  /*Ã´ÓĞÕâ¸öÎÄ¼ş*/
-
-                console.log('404');
-
-                fs.readFile(staticpath+'/404.html',function(error,data404){
-                    if(error){
-                        console.log(error);
-                    }
-                    res.writeHead(404,{"Content-Type":"text/html;charset='utf-8'"});
-                    res.write(data404);
-                    res.end(); /*½áÊøÏìÓ¦*/
-                })
-
-            }else{ /*·µ»ØÕâ¸öÎÄ¼ş*/
-
-               getMime(extname,function(mime){
-                    res.writeHead(200,{"Content-Type":""+mime+";charset='utf-8'"});
-                    res.write(data);
-                    res.end(); /*½áÊøÏìÓ¦*/
-                });
-
-            }
+  var pathname=url.parse(req.url).pathname;
+  if(pathname=='/'){
+    pathname='/index.html';
+  }
+  var extname=path.extname(pathname);
+  if(pathname!='/favicon.ico'){
+    fs.readFile(staticpath+'/'+pathname,function(err,data){
+      if(err){
+        console.log('404');
+        fs.readFile(staticpath+'/404.html',function(error,data404){
+          if(error){
+              console.log(error);
+          }
+          res.writeHead(404,{"Content-Type":"text/html;charset='utf-8'"});
+          res.write(data404);
+          res.end();
         })
-
-    }
-
+      }else{
+       getMime(extname,function(mime){
+          res.writeHead(200,{"Content-Type":""+mime+";charset='utf-8'"});
+          res.write(data);
+          res.end();
+        });
+      }
+    })
+  }
 }
