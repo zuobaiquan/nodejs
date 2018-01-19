@@ -1,27 +1,16 @@
-/**
- * Created by Administrator on 2017/7/3 0003.
- */
-
 var fs=require('fs');
-
-//非阻塞io
 //console.log('1');
-//
+
 //fs.readFile('mime.json',function(err,data){
 //    //console.log(data);
 //    console.log('2');
 //})
-//
 //console.log('3');
 
-
-
 function getMime(){
-
     //1
     fs.readFile('mime.json',function(err,data){
         //console.log(data.toString());
-
         return data;//3
     })
     //2
@@ -29,4 +18,4 @@ function getMime(){
 }
 
 
-console.log(getMime());  /*有问题*/
+console.log(getMime());  /*鐢变簬寮傛鎿嶄綔娌℃湁鎷垮埌鏁版嵁锛屽浣曡В鍐筹紝閫氳繃寮傛鎿嶄綔*/

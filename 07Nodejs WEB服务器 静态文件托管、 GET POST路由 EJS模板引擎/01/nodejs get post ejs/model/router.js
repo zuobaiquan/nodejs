@@ -1,6 +1,8 @@
 var fs=require('fs');
 var path=require('path');
 var url=require('url');
+
+//获取文件类型的方法
 function getMime(extname,callback){
   fs.readFile('./mime.json',function(err,data){
     if(err){
@@ -13,6 +15,8 @@ function getMime(extname,callback){
     callback(result)
   })
 }
+
+
 exports.statics=function(req,res,staticpath){
   var pathname=url.parse(req.url).pathname;
   if(pathname=='/'){
