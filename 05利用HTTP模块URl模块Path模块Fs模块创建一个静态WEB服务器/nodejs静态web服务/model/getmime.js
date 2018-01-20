@@ -1,4 +1,4 @@
-exports.getMime=function(extname){  /*��ȡ��׺���ķ���*/
+exports.getMime=function(extname){  /*获取文件类型*/
   switch (extname){
     case '.html':
         return 'text/html';

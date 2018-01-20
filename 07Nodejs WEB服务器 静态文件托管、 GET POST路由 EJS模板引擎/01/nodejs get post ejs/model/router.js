@@ -6,8 +6,8 @@ var url=require('url');
 function getMime(extname,callback){
   fs.readFile('./mime.json',function(err,data){
     if(err){
-        console.log('mime.json文件不存在');
-        return false;
+      console.log('mime.json文件不存在');
+      return false;
     }
     //console.log(data.toString());
     var Mimes=JSON.parse(data.toString());
@@ -29,7 +29,7 @@ exports.statics=function(req,res,staticpath){
         console.log('404');
         fs.readFile(staticpath+'/404.html',function(error,data404){
           if(error){
-              console.log(error);
+            console.log(error);
           }
           res.writeHead(404,{"Content-Type":"text/html;charset='utf-8'"});
           res.write(data404);
