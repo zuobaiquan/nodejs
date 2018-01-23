@@ -8,18 +8,14 @@ var http = require('http');
 var server = http.createServer(app);
 
 app.get('/', function (req, res) {
-
     res.send('首页');
 });
 app.get('/login', function (req, res) {
-
     res.send('login');
 });
 
 app.get('/register', function (req, res) {
-
     res.send('register');
-
 });
 
 app.post('/test', function (req, res) {

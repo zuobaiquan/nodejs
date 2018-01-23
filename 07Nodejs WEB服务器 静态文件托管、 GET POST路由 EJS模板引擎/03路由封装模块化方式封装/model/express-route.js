@@ -57,7 +57,7 @@ var Server=function(){
         if(!string.startsWith('/')){
             string='/'+string;
         }
-        //    /login/
+        //login
         G._post[string]=callback;
         //G._post['dologin']=function(req,res){
         //}
