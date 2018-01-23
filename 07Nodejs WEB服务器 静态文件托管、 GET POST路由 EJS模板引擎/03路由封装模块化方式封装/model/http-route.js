@@ -1,5 +1,4 @@
 var url = require('url');
-
 /*
 * 对resquest进行封装
 */
