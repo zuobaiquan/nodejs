@@ -1,6 +1,3 @@
-/**
- * Created by Administrator on 2017/7/2 0002.
- */
 //index.js
 var route = require('./model/http-route.js');
 var app = route();
