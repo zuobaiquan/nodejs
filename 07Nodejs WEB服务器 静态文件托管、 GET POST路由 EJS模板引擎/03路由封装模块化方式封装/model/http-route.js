@@ -1,7 +1,6 @@
 var url = require('url');
-/*
-* 对resquest进行封装
-*/
+
+/* 对resquest进行封装*/
 var packingRes = function (res) {
     var end = res.end;
     res.end = function (data, encoding, callback) {
