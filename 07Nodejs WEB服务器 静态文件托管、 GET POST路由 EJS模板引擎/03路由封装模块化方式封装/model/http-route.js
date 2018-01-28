@@ -35,9 +35,8 @@ var packingRes = function (res) {
     };
     return res;
 };
-/**
- * 路由规则
- */
+
+/*路由规则*/
 var route = function () {
     var self = this;
     this._get = {};
