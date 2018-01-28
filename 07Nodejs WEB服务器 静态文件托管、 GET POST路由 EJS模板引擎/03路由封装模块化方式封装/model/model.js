@@ -40,5 +40,5 @@ var app={
 module.exports=app;
 
 //app.login('req');
-//
+
 //app['login']('req');
