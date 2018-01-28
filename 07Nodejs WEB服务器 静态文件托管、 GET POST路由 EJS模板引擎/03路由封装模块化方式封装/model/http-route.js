@@ -81,9 +81,8 @@ var route = function () {
             res.send(method + '请求路由地址不存在:' + pathname);
         }
     };
-    /**
-     * 注册get请求
-     */
+    
+    /*注册get请求*/
     handle.get = function (string, callback) {
         if (!string.startsWith('/')) {
             string = '/' + string;
