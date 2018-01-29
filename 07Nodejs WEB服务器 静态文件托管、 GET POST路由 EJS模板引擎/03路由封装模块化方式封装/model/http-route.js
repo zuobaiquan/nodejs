@@ -43,7 +43,6 @@ var route = function () {
     this._post = {};
     /**
      * 处理请求
-     *
      * @param {*} req
      * @param {*} res
      */
