@@ -1,6 +1,6 @@
 var url = require('url');
 
-/* 对resquest进行封装*/
+/* 对resquest进行封装 */
 var packingRes = function (res) {
     var end = res.end;
     res.end = function (data, encoding, callback) {
@@ -92,7 +92,7 @@ var route = function () {
         }
         self._get[string] = callback;
     };
-    
+
     /* 注册post请求 */
     handle.post = function (string, callback) {
         if (!string.startsWith('/')) {
