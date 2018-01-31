@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ejs": "^2.5.6",
+    "mongodb": "^2.2.30"
+  }
+}
