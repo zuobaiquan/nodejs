@@ -35,7 +35,7 @@ app.get('/',function(req,res){
   var msg='这是数据库的数据';
   ejs.renderFile('views/index.ejs',{msg:msg},function(err,data){
     console.log(err);
-      res.send(data);
+    res.send(data);
   })
 })
 
@@ -43,7 +43,6 @@ app.get('/',function(req,res){
 app.get('/add',function(req,res){
    //增加数据
   MongoClient.connect(DBurl,function(err,db){
-    res.writeHead(200,{"Content-Type":"text/html;charset='utf-8'"});
     if(err){
       console.log(err);
       console.log('数据库连接失败');
@@ -51,21 +50,22 @@ app.get('/add',function(req,res){
     }
     //增加数据
     db.collection('user').insertOne({
-      "name":"zuobaiquan",
+      "name":"zhangsan",
       "age":10
     },function(error,result){
-        res.writeHead(200,{"Content-Type":"text/html;charset='utf-8'"});
+        res.writeHead(200,{"Content-Type":"text/html;charset=utf-8"});
         if(error){
           console.log('增加数据失败');
           return;
         }
-        res.send('增加数据成功');
+        res.write('增加数据成功');
+        res.end(); /*结束响应*/
         db.close();//关闭数据库
     })
   })
 })
 
-/*app.get('/edit',function(req,res){
+app.get('/edit',function(req,res){
   //res.send('修改数据成功');
   MongoClient.connect(DBurl,function(err,db){
     if(err){
@@ -77,20 +77,19 @@ app.get('/add',function(req,res){
         "age":666
     }},function(error,data){
       if(error){
-          console.log('修改数据失败');
-          return;
+        console.log('修改数据失败');
+        return;
       }
       console.log(data);
-      res.send('修改数据成功');
+      res.write('修改数据成功');
       db.close();//关闭数据库
     })
   })
 })
-*/
-/*
-//app.get('/delete',function(req,res){
+
+app.get('/delete',function(req,res){
   //delete?name=lisi
-  //console.log(url.parse(req.url,true));
+  console.log(url.parse(req.url,true));
   var query=url.parse(req.url,true).query;
   //console.log(query.name);
   var name=query.name;
@@ -102,14 +101,12 @@ app.get('/add',function(req,res){
     }
     db.collection('user').deleteOne({"name":name},function(error,data){
       if(error){
-          console.log('删除失败');
-          return;
+        console.log('删除失败');
+        return;
       }
       console.log(data);
-      res.send('删除数据成功');
+      res.write('删除数据成功');
       db.close();
     })
   })
 })
-
-*/
