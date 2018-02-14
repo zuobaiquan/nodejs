@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <title></title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body
+    <%- include public/header.ejs%>
+    <br/>
+    <img src="images/baidu.png" alt="百度"/>
+    <ul>
+        <%for(var i=0;i<list.length;i++){%>
+            <li><%=list[i]%></li>
+        <%}%>
+    </ul>
+</body>
+</html>
