@@ -1,8 +1,6 @@
 var url = require('url');
 
-/*
-* 对resquest进行封装
-*/
+/* 对resquest进行封装 */
 var packingRes = function (res) {
     var end = res.end;
     res.end = function (data, encoding, callback) {
@@ -37,16 +35,14 @@ var packingRes = function (res) {
     };
     return res;
 };
-/**
- * 路由规则
- */
+
+/*路由规则*/
 var route = function () {
     var self = this;
     this._get = {};
     this._post = {};
     /**
      * 处理请求
-     *
      * @param {*} req
      * @param {*} res
      */
@@ -84,9 +80,8 @@ var route = function () {
             res.send(method + '请求路由地址不存在:' + pathname);
         }
     };
-    /**
-     * 注册get请求
-     */
+
+    /*注册get请求*/
     handle.get = function (string, callback) {
         if (!string.startsWith('/')) {
             string = '/' + string;
@@ -96,9 +91,8 @@ var route = function () {
         }
         self._get[string] = callback;
     };
-    /**
-     * 注册post请求
-     */
+
+    /* 注册post请求 */
     handle.post = function (string, callback) {
         if (!string.startsWith('/')) {
             string = '/' + string;

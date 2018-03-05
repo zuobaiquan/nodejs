@@ -1,0 +1,40 @@
+<%- include header %>
+<% if(info=="user"){ %>
+<table class="table table-hover">
+
+  <thead> 用户</thead>
+  <tr>
+  	<th>姓名</th>
+  	<th>密码</th>
+  	<th>邮箱</th>
+  	<th>编辑</th>
+  </tr>
+  <% items.forEach(function(listitem){ %>
+  	<tr>
+  		<td><%= listitem.name %></td>
+  		<td><%= listitem.password %></td>
+  		<td><%= listitem.email %></td>
+  		<td><button>编辑</button></td>
+    </tr>
+  <% }) %>
+</table>
+<% }else{ %>
+<table class="table table-hover">
+  <thead>文章</thead>
+  <tr>
+  	<th>姓名</th>
+  	<th>内容</th>
+  	<th>编辑</th>
+  </tr>
+  <% posts.forEach(function(listitem){ %>
+  	<tr>
+  		<td><%= listitem.user %></td>
+  		<td><%= listitem.post %></td>
+  		<td><%- link_to("删除","../deletePost?u="+listitem.user) %>
+  		
+  		</td>
+    </tr>
+  <% }) %>
+</table>
+<% } %>
+<%- include footer %>
