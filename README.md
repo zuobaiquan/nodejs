@@ -1,5 +1,7 @@
 # 《Node.js 课程学习》
 
+koa2进阶学习笔记 https://github.com/ChenShenhai/koa2-note/
+koa2进阶学习在线电子书：https://chenshenhai.github.io/koa2-note/
 
 ## 为何写作此课程
 
