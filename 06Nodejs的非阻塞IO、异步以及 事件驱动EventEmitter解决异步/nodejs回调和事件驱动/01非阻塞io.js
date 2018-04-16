@@ -17,5 +17,4 @@ function getMime(){
     //return '123';
 }
 
-
-console.log(getMime());  /*由于异步操作没有拿到数据，如何解决，通过异步操作*/
+console.log(getMime());/*由于异步操作没有拿到数据，如何解决，通过异步操作*/
