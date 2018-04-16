@@ -93,7 +93,7 @@ app.get('/delete',function(req,res){
   //console.log(url.parse(req.url,true));
   var query=url.parse(req.url,true).query;
   //console.log(query.name);
-  var name=query.name;
+  var name=query.name; 
   console.log(name);
   MongoClient.connect(DBurl,function(err,db){
     if(err){
