@@ -1,0 +1,18 @@
+{
+  "name": "cookie_session",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01 cookie.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^1.3.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "md5-node": "^1.0.1"
+  }
+}

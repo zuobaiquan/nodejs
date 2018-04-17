@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+    </style>
+
+
+
+</head>
+<body>
+    <h1>CMS系统文章管理</h1>
+
+    <ul>
+        <%for(var i=0;i<list.length;i++){ %>
+        <li><a href="/newscontent?id=<%=list[i]._id%>"><%=list[i].title%></a></li>
+
+        <%}%>
+    </ul>
+
+</body>
+</html>
