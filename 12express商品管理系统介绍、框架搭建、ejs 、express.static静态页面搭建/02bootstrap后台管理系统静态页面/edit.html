@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<!--The content below is only a placeholder and can be replaced.-->
+
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+
+
+
+<link rel="stylesheet" href="css/basic.css">
+
+
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+
+            <img src="images/node.jpg" height="44px;" />
+
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">             
+
+                <li class="active"><a href="#">商品管理</a>
+                </li>  
+				 <li class="active"><a href="#">系统设置</a>
+                </li>  
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a>欢迎您,admin</a>
+                </li>
+                <li><a href="#">安全退出</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            <a href="#" class="list-group-item active">商品管理</a>
+
+            <a href="/" class="list-group-item">
+                商品列表</a>
+            <a href="/add" class="list-group-item">
+                增加商品</a>
+
+			<a href="#" class="list-group-item active">分类管理</a>
+
+            <a href="/" class="list-group-item">
+                商品分类列表</a>
+            <a href="/add" class="list-group-item">
+                增加商品分类</a>
+			
+          
+        </div>
+        <div class="col-sm-10">
+            <ol class="breadcrumb">
+                <li class="active">商品管理
+                </li>
+                <li class="active">商品列表
+                </li>
+            </ol>
+            <div class="panel panel-default">
+              
+			    <div class="panel-heading">
+                  增加商品
+                </div>
+                <div class="panel-body">
+                    <div class="table-responsive input-form">
+                        <form action="/doAdd" method="post">
+                            <ul>
+                                <li>  商品名称: <input type="text" name="title"/></li>
+
+                                <li>  商品图片: <input type="file" name="pic"/></li>
+                                <li>  商品价格: <input type="text" name="price"/></li>
+                                <li>  商品邮费: <input type="text" name="fee"/></li>
+
+                                <li>
+                                    商品描述:
+                                    <textarea name="description" id="" cols="60" rows="8"></textarea>
+                                </li>
+
+                                <li>
+                                    <br/>
+                                    <button type="submit" class="btn btn-default">提交</button>
+                                </li>
+
+                            </ul>
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
