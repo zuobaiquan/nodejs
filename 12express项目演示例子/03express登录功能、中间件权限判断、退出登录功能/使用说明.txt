@@ -1,0 +1,22 @@
+1.cd 到项目里面运行  
+
+
+	cnpm instlal 安装依赖
+
+
+2.需要打开数据库
+
+	2.需要创建productmanage数据库
+
+
+	3.productmanage	数据库里面有user表
+
+
+	4.在user表中有数据  ,如果没有执行如下命令插入
+
+	
+	db.user.insert({"username":"admin","password":"123456"})
+
+
+
+
