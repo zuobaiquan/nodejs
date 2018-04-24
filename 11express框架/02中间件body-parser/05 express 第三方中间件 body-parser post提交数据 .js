@@ -37,7 +37,7 @@ app.get('/login',function(req,res){
 })
 
 app.post('/doLogin',function(req,res){
-  console.log(req.body);   /*获取post提交的数据*/
+  console.log(req.body);//获取post提交的数据
 })
 
 app.listen(3002,'127.0.0.1');
