@@ -1,7 +1,8 @@
 /*
+
 cookie-parser可以设置和获取cookie
 
-1.安装   cnpm instlal cookie-parser --save
+1.安装 cnpm install cookie-parser --save
 
 2.引入var cookieParser = require('cookie-parser');
 
