@@ -1,0 +1,15 @@
+/* 1 */
+{
+  "_id" : ObjectId("5992ba01b0efa1af6d5756a9"),
+  "username" : "admin",
+  "password" : "e10adc3949ba59abbe56e057f20f883e",
+  "status" : "1"
+}
+
+/* 2 */
+{
+  "_id" : ObjectId("5992c5f4f684b5092044512f"),
+  "username" : "zhangsan",
+  "password" : "e10adc3949ba59abbe56e057f20f883e"
+}
+

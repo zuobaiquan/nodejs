@@ -1,0 +1,27 @@
+/* 1 */
+{
+  "_id" : ObjectId("599413d7d6c921ac546a952e"),
+  "title" : "iphone8",
+  "price" : 6000.0,
+  "fee" : 20.0,
+  "pic" : ""
+}
+
+/* 2 */
+{
+  "_id" : ObjectId("59941593d6c921ac546a9530"),
+  "title" : "lianxing",
+  "price" : 4000.0,
+  "fee" : 22.0,
+  "pic" : ""
+}
+
+/* 3 */
+{
+  "_id" : ObjectId("599415abd6c921ac546a9531"),
+  "title" : "БЄПл",
+  "price" : 4000.0,
+  "fee" : 22.0,
+  "pic" : ""
+}
+
