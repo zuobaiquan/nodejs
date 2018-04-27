@@ -1,23 +1,3 @@
-/*
-1.安装 express-session
- cnpm install express-session  --save
-
-2.引入
- var session = require("express-session");
-
-3.设置官方文档提供的中间件
- app.use(session({
-	 secret: 'keyboard cat',
-	 resave: false,
-	 saveUninitialized: true
- }))
-
-4.使用
- 设置值
- req.session.username = "张三";
- 获取值 req.session.username
-*/
-
 var express = require("express");
 var app = express();
 
@@ -67,5 +47,4 @@ app.get("/news",function(req,res){
 		res.send('未登录 news');
 	}
 });
-
 app.listen(3000);
