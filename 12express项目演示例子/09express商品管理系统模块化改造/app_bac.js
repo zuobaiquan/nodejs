@@ -289,30 +289,19 @@ app.post('/doProductEdit',function(req,res){
 app.get('/productdelete',function(req,res){
 
     //获取id
-
-    var  id=req.query.id;
+    var id=req.query.id;
 
     DB.deleteOne('product',{"_id":new DB.ObjectID(id)},function(err){
-
         if(!err){
-
             res.redirect('/product');
         }
-
     })
     //res.send('productdelete');
-
-
-
 })
 
 app.get('/loginOut',function(req,res){
-
-
     //销毁session
-
     req.session.destroy(function(err){
-
         if(err){
             console.log(err);
         }else{
@@ -321,17 +310,13 @@ app.get('/loginOut',function(req,res){
     })
 })
 
-
 //删除数据
 app.get('/delete',function(req,res){
-
     DB.deleteOne('product',{"title":"iphone4"},function(error,data){
         if(!error){
-
             res.send('删除数据成功');
         }
     })
 })
 
 app.listen(3004,'127.0.0.1');
-
