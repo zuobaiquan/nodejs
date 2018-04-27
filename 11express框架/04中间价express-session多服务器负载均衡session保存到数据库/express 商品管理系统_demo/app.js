@@ -48,14 +48,14 @@ app.use(function(req,res,next){
     //console.log(req.url);
     //next();
     if(req.url=='/login' || req.url=='/doLogin'){
-        next();
+      next();
     }else{
-        if(req.session.userinfo&&req.session.userinfo.username!=''){   /*判断有没有登录*/
-            app.locals['userinfo']=req.session.userinfo;   /*配置全局变量  可以在任何模板里面使用*/
-            next();
-        }else{
-            res.redirect('/login')
-        }
+      if(req.session.userinfo&&req.session.userinfo.username!=''){   /*判断有没有登录*/
+          app.locals['userinfo']=req.session.userinfo;   /*配置全局变量  可以在任何模板里面使用*/
+          next();
+      }else{
+          res.redirect('/login')
+      }
     }
 })
 
@@ -85,13 +85,13 @@ app.post('/doLogin',function(req,res){
         result.toArray(function(err,data){
             console.log(data);
             if(data.length>0){
-                console.log('登录成功');
-                //保存用户信息
-                req.session.userinfo=data[0];
-                res.redirect('/product');  /*登录成功跳转到商品列表*/
+              console.log('登录成功');
+              //保存用户信息
+              req.session.userinfo=data[0];
+              res.redirect('/product');  /*登录成功跳转到商品列表*/
             }else{
-                //console.log('登录失败');
-                res.send("<script>alert('登录失败');location.href='/login'</script>");
+              //console.log('登录失败');
+              res.send("<script>alert('登录失败');location.href='/login'</script>");
             }
             db.close();
         })
