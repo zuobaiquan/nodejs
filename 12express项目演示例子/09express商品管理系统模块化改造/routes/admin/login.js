@@ -18,7 +18,8 @@ router.get('/',function(req,res){
 //处理登录的业务逻辑
 router.post('/doLogin',function(req,res){
     var username=req.body.username;
-    var password=md5(req.body.password);  /*要对用户输入的密码加密*/
+    var password=req.body.password;
+    // var password=md5(req.body.password);  /*要对用户输入的密码加密*/
     //1.获取数据
     //2.连接数据库查询数据
     DB.find('user',{

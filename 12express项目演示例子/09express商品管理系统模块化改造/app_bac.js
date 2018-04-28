@@ -30,7 +30,7 @@ var md5=require('md5-node'); /*md5加密*/
 //获取post
 
 var multiparty = require('multiparty');  /*图片上传模块  即可以获取form表单的数据 也可以实现上传图片*/
-var  fs=require('fs');
+var fs=require('fs');
 //数据库操作
 var DB=require('./modules/db.js');
 
@@ -47,6 +47,10 @@ app.use(session({
     rolling:true
 }))
 
+
+
+//设置模板的位置
+app.set('views', __dirname + '/views');
 //使用ejs模板引擎   默认找views这个目录
 app.set('view engine','ejs');
 
